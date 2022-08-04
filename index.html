@@ -1,1 +1,35 @@
-text
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <style>
+        #gitalk-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gitalk-container"></div>
+    <script>
+    var gitalk = new Gitalk({
+        clientID: '6b2957b5351ae54b6bfe', //clientID 
+        clientSecret: 'ed7ea99347bc839e85cfc7c8b1b9180340d93d13', //clientSecret
+        repo: 'band', // 评论仓库名
+        owner: 'alltobebetter6',
+        admin: ['alltobebetter6'], //管理人
+        id: location.pathname, // 返回当前 URL 的路径部分作为id
+        language:'zh-CN', //语言
+        distractionFreeMode: false  // 无干扰模式
+    })
+    gitalk.render('gitalk-container')
+    </script>
+</body>
+
+</html>
